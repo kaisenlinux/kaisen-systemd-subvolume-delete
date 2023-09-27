@@ -1,0 +1,10 @@
+#!/bin/bash
+
+RED='\e[1;31m'
+
+if [[ "$EUID" -ne "0" ]]; then
+	echo $RED "Run this script as root or with the sudo command."
+	exit 1
+fi
+
+for systemd_subvolume in `sudo btrfs subvolume list / | grep -E 'var\/lib\/machines|\/portables' | cut -d ' ' -f2`;do btrfs subvolume delete -i "$systemd_subvolume" /;done

@@ -1,0 +1,5 @@
+kaisen-systemd-subvolume-delete (1.0) kaisen-packages; urgency=medium
+
+  * Initial release
+
+ -- Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>  Wed, 27 Sep 2023 10:14:56 +0100

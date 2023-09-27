@@ -1,0 +1,14 @@
+Source: kaisen-systemd-subvolume-delete
+Section: admin
+Priority: optional
+Maintainer: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.6.1
+Homepage: https://kaisenlinux.org
+Vcs-Browser: https://gitlab.com/kaisenlinux/packages/kaisen-systemd-subvolume-delete
+Vcs-Git: https://gitlab.com/kaisenlinux/packages/kaisen-systemd-subvolume-delete.git
+
+Package: kaisen-systemd-subvolume-delete
+Architecture: all
+Depends: btrfs-progs
+Description: Automatically delete BTRFS subvolumes created by systemd

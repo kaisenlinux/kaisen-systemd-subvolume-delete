@@ -1,0 +1,9 @@
+[Unit]
+Description=Kaisen default systemd subvolume deletion
+
+[Service]
+Type=oneshot
+ExecStart=/usr/share/kaisen-systemd-subvolume-delete/kaisen-systemd-subvolume-delete
+
+[Install]
+WantedBy=multi-user.target

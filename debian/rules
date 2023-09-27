@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_install:
+	install -p -m 0755 $(CURDIR)/kaisen-systemd-subvolume-delete $(CURDIR)/debian/kaisen-systemd-subvolume-delete/usr/share/kaisen-systemd-subvolume-delete/
+
+override_dh_installsystemd:
+	dh_installsystemd --no-restart-after-upgrade --no-stop-on-upgrade --no-restart-on-upgrade
